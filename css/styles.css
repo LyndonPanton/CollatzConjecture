@@ -39,7 +39,12 @@ body, html {
 }
 
 #collatz-output-calculation {
-	
+	width: 80%;
+	height: 70%;
+	margin: 0 auto;
+	border-radius: 4%;
+	background-color: #C91F44;
+	text-align: center;
 }
 
 #heading1 {
