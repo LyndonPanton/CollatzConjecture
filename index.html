@@ -7,16 +7,30 @@
 	<link rel="stylesheet" type="text/css" href="./css/styles.css" />
 </head>
 <body>
-	<header>
-
+	<header id="header">
+		<h1 id="heading1">Collatz Conjecture</h1>
 	</header>
 
-	<main>
+	<main id="app">
+		<form id="collatz-form">
+			<input id="collatz-form-input" type="number" name="collatz-form-input" placeholder="Enter a number..." />
+			<input id="collatz-form-submit" type="submit" name="collatz-form-submit" value="Calculate" />
+		</form>
 
+		<section id="collatz-output">
+			<p id="collatz-output-turns">Turns :<span id="collatz-output-count">0</span></p>
+			<section id="calculation">
+
+			</section>
+		</section>
 	</main>
 
-	<footer>
-
+	<footer id="footer">
+		<span id="copyright">&copy; <span id="current-year"></span> Lyndon Panton | All Rights Reserved</span>
 	</footer>
+
+	<!-- Additionally Feature: Add an element above the footer that can be pulled up explaining what the "Collatz Conjecture" is or add an icon that when pressed brings up a modal window with the explanation -->
+
+	<script src="./js/app.js"></script>
 </body>
 </html>
