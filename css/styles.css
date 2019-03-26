@@ -22,6 +22,7 @@ body, html {
 	border: none;
 	border-bottom: 1px #D91B35 solid;
 	background: transparent;
+	color: #FFFFFF;
 }
 
 #collatz-form-input:focus {
