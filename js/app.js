@@ -22,7 +22,7 @@ form.addEventListener("submit", function(e) {
 		// Make output area changes
 		console.log("Enter a non-zero positive value.");
 	} else { // If the value is valid...
-		const calculation = document.getElementById("calculation");
+		const calculation = document.getElementById("collatz-output-calculation");
 		let line = document.createElement("p");
 		line.id = "line";
 		// console.log(number);
