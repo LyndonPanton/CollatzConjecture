@@ -17,6 +17,18 @@ body, html {
 	background-color: #770F28;
 }
 
+#collatz-form-input {
+	margin: 8px auto 0;
+	border: none;
+	border-bottom: 1px #D91B35 solid;
+	background: transparent;
+}
+
+#collatz-form-input::placeholder {
+	text-align: left;
+	color: #FFFFFF;
+}
+
 #heading1 {
 	text-decoration: underline;
 }
