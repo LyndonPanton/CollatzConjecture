@@ -24,6 +24,11 @@ body, html {
 	background: transparent;
 }
 
+#collatz-form-input:focus {
+	outline: none;
+	border-bottom: 1px #FFA500 solid;
+}
+
 #collatz-form-input::placeholder {
 	text-align: left;
 	color: #FFFFFF;
