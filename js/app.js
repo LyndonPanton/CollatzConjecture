@@ -6,7 +6,7 @@ const form = document.getElementById("collatz-form");
 form.addEventListener("submit", function(e) {
 	e.preventDefault();
 
-	let number = Number(document.getElementById("colllatz-form-input").value);
+	let number = Number(document.getElementById("collatz-form-input").value);
 	let count = 0;
 
 	if (number == "") { // If no value was entered...
