@@ -22,6 +22,23 @@ form.addEventListener("submit", function(e) {
 		// Make output area changes
 		console.log("Enter a non-zero positive value.");
 	} else { // If the value is valid...
+		const calculation = document.getElementById("calculation");
+		let line = document.createElement("p");
+		line.id = "line";
+		// console.log(number);
+		while (number != 1) {
+			++count;
+			calculation.textContent = "";
+			let previous = number;
+			if (number % 2 === 0) {
+				number = number / 2;
+				console.log(`${count}: ${previous} / 2 = ${number}`);
+			} else {
+				number = (number * 3) + 1;
+				console.log(`${count}: ${previous} x 3 + 1 = ${number}`);
+			}
+		}
 
+		console.log(`It took ${count} runs to get to 1`);
 	}
 });
