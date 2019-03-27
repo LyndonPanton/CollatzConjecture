@@ -4,6 +4,10 @@
 	color: #FFFFFF;
 }
 
+::-webkit-scrollbar {
+	background: transparent;
+}
+
 body, html {
 	padding: 0;
 	margin: 0;
@@ -47,6 +51,7 @@ body, html {
 	height: 70%;
 	margin: 0 auto;
 	border-radius: 4%;
+	overflow-y: scroll;
 	background-color: #C91F44;
 }
 
