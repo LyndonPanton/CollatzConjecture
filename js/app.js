@@ -66,10 +66,18 @@ form.addEventListener("submit", function(e) {
 			++count;
 
 			let line = document.createElement("div");
+			line.className = "collatz-output-line";
+
 			let index = document.createElement("span");
+			index.className = "collatz-output-index";
 			index.textContent = `${count}: `;
+
 			let expression = document.createElement("span");
+			expression.className = "collatz-output-expression";
+
 			let result = document.createElement("span");
+			result.className = "collatz-output-result";
+
 			let previous = number;
 
 			if (number % 2 === 0) {
@@ -90,6 +98,5 @@ form.addEventListener("submit", function(e) {
 		}
 
 		document.getElementById("collatz-output-count").textContent = count;
-		// console.log(`It took ${count} turns to get to 1`);
 	}
 });
