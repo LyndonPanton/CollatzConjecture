@@ -43,7 +43,6 @@ form.addEventListener("submit", function(e) {
 	// }
 
 	let area = document.getElementById("collatz-output-calculation");
-	let line = document.createElement("div");
 
 	if (number == "") { // If no value was entered..
 		console.log("Enter a value that is not 0.");
@@ -59,22 +58,29 @@ form.addEventListener("submit", function(e) {
 		area.textContent = "Enter an integral value";
 	} else { // If the value entered was valid..
 		console.log("Valid value entered");
-		while(calculation.firstChild) {
-			calculation.removeChild(calculation.firstChild);
+		while (area.firstChild) {
+			area.removeChild(area.firstChild);
 		}
 
 		while (number !== 1) {
 			++count;
 
+			let line = document.createElement("div");
 			let previous = number;
 			if (number % 2 === 0) {
 				number = number / 2;
 				console.log(`${count}: ${previous} / 2 = ${number}`);
+				line.textContent += `${count}: ${previous} / 2 = ${number}`;
 			} else {
 				number = (number * 3) + 1;
 				console.log(`${count}: (${previous} * 3) + 1 = ${number}`);
+				line.textContent += `${count}: (${previous} * 3) + 1 = ${number}`;
 			}
+
+			area.appendChild(line);
 		}
+
+		// area.appendChild(line);
 
 		console.log(`It took ${count} turns to get to 1`);
 	}
