@@ -53,7 +53,7 @@ form.addEventListener("submit", function(e) {
 	}  else if (number <= 0) { // If the value entered was not positive..
 		console.log("Enter a non-zero positive value");
 		area.textContent = "Enter a non-zero positive value";
-	} else if (number % 1 == 0) { // If the value entered was not an integer..
+	} else if (number % 1 !== 0) { // If the value entered was not an integer..
 		console.log("Enter an integral value");
 		area.textContent = "Enter an integral value";
 	} else { // If the value entered was valid..
