@@ -66,22 +66,30 @@ form.addEventListener("submit", function(e) {
 			++count;
 
 			let line = document.createElement("div");
+			let index = document.createElement("span");
+			index.textContent = `${count}: `;
+			let expression = document.createElement("span");
+			let result = document.createElement("span");
 			let previous = number;
+
 			if (number % 2 === 0) {
 				number = number / 2;
-				console.log(`${count}: ${previous} / 2 = ${number}`);
-				line.textContent += `${count}: ${previous} / 2 = ${number}`;
+				expression.textContent = `${previous} / 2 = `;
 			} else {
 				number = (number * 3) + 1;
-				console.log(`${count}: (${previous} * 3) + 1 = ${number}`);
-				line.textContent += `${count}: (${previous} * 3) + 1 = ${number}`;
+				expression.textContent = `(${previous} * 3) + 1 = `;
 			}
+
+			result.textContent = `${number}`;
+
+			line.appendChild(index);
+			line.appendChild(expression);
+			line.appendChild(result);
 
 			area.appendChild(line);
 		}
 
-		// area.appendChild(line);
-
-		console.log(`It took ${count} turns to get to 1`);
+		document.getElementById("collatz-output-count").textContent = count;
+		// console.log(`It took ${count} turns to get to 1`);
 	}
 });
